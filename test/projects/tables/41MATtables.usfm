@@ -1,0 +1,55 @@
+\id MAT Table alignment tests
+\h Tables
+\toc1 Table alignment tests
+\toc2 Tables
+\toc3 Tbl
+\mt1 Table alignment
+\c 1
+\p
+\v 1 Each table below exercises one kind of cell alignment. The cell text says where it should sit: “start” means flush left in LTR and flush right in RTL; “end” is the opposite edge; “centre” is centred in its column.
+\s1 1. Start (th/tc), single-line cells
+\tr \th1 Head1 \th2 Head2 \th3 Head3
+\tr \tc1 start \tc2 start \tc3 start
+\tr \tc1 start start start \tc2 st \tc3 start start
+\tr \tc1 st \tc2 start start start \tc3 st
+\s1 2. End (thr/tcr), single-line cells
+\tr \thr1 Head1 \thr2 Head2 \thr3 Head3
+\tr \tcr1 end \tcr2 end \tcr3 end
+\tr \tcr1 end end end \tcr2 en \tcr3 end end
+\tr \tcr1 en \tcr2 end end end \tcr3 en
+\s1 3. Centre (thc/tcc), single-line cells
+\tr \thc1 Head1 \thc2 Head2 \thc3 Head3
+\tr \tcc1 centre \tcc2 centre \tcc3 centre
+\tr \tcc1 centre centre centre \tcc2 ce \tcc3 centre centre
+\tr \tcc1 ce \tcc2 centre centre centre \tcc3 ce
+\s1 4. One alignment per column (start, centre, end)
+\tr \th1 Book \thc2 Chapters \thr3 Verses
+\tr \tc1 Genesis \tcc2 50 \tcr3 1533
+\tr \tc1 Ruth \tcc2 4 \tcr3 85
+\tr \tc1 Song of Songs \tcc2 8 \tcr3 117
+\s1 5. Mixed alignments within each column
+\tr \tc1 start start start start \tcc2 centre centre centre \tcr3 end end end end
+\tr \tcc1 centre \tcr2 end \tc3 start
+\tr \tcr1 end \tc2 start \tcc3 centre
+\s1 6. Start, wrapping cells
+\tr \th1 Key \th2 Description
+\tr \tc1 start \tc2 start: a long cell whose text runs on for long enough that it has to wrap onto a second line and probably a third, ending here.
+\tr \tc1 start start \tc2 start short
+\s1 7. End, wrapping cells
+\tr \thr1 Key \thr2 Description
+\tr \tcr1 end \tcr2 end: a long cell whose text runs on for long enough that it has to wrap onto a second line and probably a third, ending here.
+\tr \tcr1 end end \tcr2 end short
+\s1 8. Centre, wrapping cells
+\tr \thc1 Key \thc2 Description
+\tr \tcc1 centre \tcc2 centre: a long cell whose text runs on for long enough that it has to wrap onto a second line and probably a third, ending here.
+\tr \tcc1 centre centre \tcc2 centre short
+\s1 9. Spanning cells
+\tr \th1 Head1 \th2 Head2 \th3 Head3
+\tr \tc1 start start \tc2 start start \tc3 start start
+\tr \tc1-2 start (spans 1–2) \tc3 start
+\tr \tcc1-3 centre (spans 1–3)
+\tr \tc1 start \tcr2-3 end (spans 2–3)
+\tr \tcr1-3 end (spans 1–3)
+\tr \tc1-3 start (spans 1–3)
+\p
+\v 2 End of tests.
